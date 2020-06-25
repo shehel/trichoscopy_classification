@@ -1,36 +1,17 @@
 seed: 888
 data: data/
+processed: data/output/
 dataset:
   base: data/base/
   clss: ['aa', 'ag', 'bc', 'dd', 'fd', 'ff', 'hd', 'ns', 'ta', 'tc']
   splits: 3
   repeats: 2
   s_per_class: 300
-model:
-  script_path: ../models/optimized.py
-optimizer:
-  script_path: ../optimizers/adam_keras.py
-  initial_lr: 0.0001
 train:
-  data_dir: data/0_split/
+  data_dir: data/output/0_split/
   train_dir: aug
   val_dir: val
   im_size: 256
   batch_size: 16
   epochs: 1
   model: models.resnet152
-  data_augmentation:
-    samplewise_center: False
-    samplewise_std_normalization: False
-    rotation_range: 0
-    width_shift_range: 0.1
-    height_shift_range: 0.1
-    horizontal_flip: True
-    vertical_flip: False
-    zoom_range: 0
-    shear_range: 0
-    channel_shift_range: 0
-    featurewise_center: False
-    zca_whitening: False
-evaluate:
-  batch_size: 1000

@@ -136,7 +136,7 @@ def main():
     base_dir = os.path.join(config["dataset"]["base"])
     for train_index, val_index in cv.split(names, labels):
         
-        split_dir = config["data"]+str(split)+"_split/"
+        split_dir = config["processed"]+str(split)+"_split/"
         # Get train-validation split from base dir
         for dir in ['raw/', 'val/']:
             for cls in config["dataset"]["clss"]:

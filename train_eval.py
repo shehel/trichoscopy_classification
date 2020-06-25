@@ -12,10 +12,12 @@ from fastai.callbacks import SaveModelCallback
 from sklearn.metrics import classification_report
 from sklearn.metrics import precision_recall_fscore_support
 
+from trains import Task
+import pdb
+
 logging.basicConfig(level=logging.INFO)
 
 def evaluate_model(config, path, t_dir, v_dir, model, bs, size, epochs):
-        
     tfms = get_transforms(do_flip=True, flip_vert=True)
     data = ImageDataBunch.from_folder(path, train=t_dir, valid=v_dir, ds_tfms = None, bs=bs, size=size)
 
@@ -61,9 +63,16 @@ def evaluate_model(config, path, t_dir, v_dir, model, bs, size, epochs):
     return round_acc[max_index], round_stats[max_index]
 
 def main():
+    # trains init
+    task = Task.init(task_name="Regular Augmentation", auto_connect_arg_parser=False)
+
     #read yaml file
     with open('config.yaml') as file:
         config= yaml.safe_load(file)
+
+    # trains hyperparameters record 
+    config = task.connect(config)
+
     
     logging.info("Using config file with following parameters: {a}".format(a=config))
 
