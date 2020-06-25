@@ -64,7 +64,7 @@ plotly==4.8.1
 praw==6.4.0
 prawcore==1.0.1
 preshed==3.0.2
-psutil==5.4.7
+psutil==5.6.6
 pycosat==0.6.3
 pycparser==2.19
 pycryptodome==3.7.3
