@@ -103,7 +103,7 @@ urllib3==1.24.1
 wasabi==0.7.0
 watchdog==0.10.2
 websocket-client==0.55.0
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 wrapt==1.11.1
 xlib==0.21
 xmltodict==0.12.0
