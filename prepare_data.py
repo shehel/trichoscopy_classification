@@ -14,14 +14,23 @@ from imgaug import augmenters as iaa
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.model_selection import StratifiedKFold
 
+from trains import Task
+
 logging.basicConfig(level=logging.INFO)
 def main():
-    #logging.info("Hypotenuse of {a}, {b} is {c}".format(a=3, b=4, c=hypotenuse(a,b))) 
-    logging.info("Preparing Data") 
     #read yaml file
     with open('config.yaml') as file:
         config= yaml.safe_load(file)
-    
+
+
+    # trains init
+    task = Task.init(task_name="Data Preprocess", auto_connect_arg_parser=False)
+   
+    #logging.info("Hypotenuse of {a}, {b} is {c}".format(a=3, b=4, c=hypotenuse(a,b))) 
+    logging.info("Preparing Data") 
+        # trains hyperparameters record
+    config = task.connect(config)
+
     logging.info("Using config file with following parameters: {a}".format(a=config))
  
     

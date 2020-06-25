@@ -1,9 +1,10 @@
+task_name: "basic augmentation"
 seed: 888
 data: data/
 processed: data/output/
 dataset:
   base: data/base/
-  clss: ['aa', 'ag', 'bc', 'dd', 'fd', 'ff', 'hd', 'ns', 'ta', 'tc']
+  clss: ['aa', 'bc', 'dd', 'fd', 'ff', 'hd', 'ns', 'ta', 'tc']
   splits: 3
   repeats: 2
   s_per_class: 300
