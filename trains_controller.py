@@ -9,7 +9,7 @@ param['1'] = 'Data Preprocess'
 param['2'] = 'Train Eval'
 
 # The queue where we want the template task (clone) to be sent to
-param['execution_queue_name'] = 'default'
+param['execution_queue_name'] = 'queue_primary'
 
 # Initialize the task pipelines first Task used to start the pipeline
 task = Task.init(task_name=param["Task Name"])
