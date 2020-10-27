@@ -13,7 +13,7 @@ cffi==1.12.1
 chardet==3.0.4
 clipster==2.0.2
 conda==4.6.7
-cryptography==2.5
+cryptography==3.2
 cycler==0.10.0
 cymem==2.0.3
 dataclasses==0.7
