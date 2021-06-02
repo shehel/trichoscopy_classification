@@ -99,7 +99,7 @@ tqdm==4.46.1
 trains==0.15.1
 typing==3.7.4.1
 update-checker==0.16
-urllib3==1.24.1
+urllib3==1.26.5
 wasabi==0.7.0
 watchdog==0.10.2
 websocket-client==0.55.0
